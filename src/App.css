@@ -1,38 +1,55 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+:root {
+    --palette-color-1: #122717;
+    --palette-color-2: #37693a;
+    --palette-color-3: #89ff5b;
+    --palette-color-4: #0F1700;
+    --palette-color-5: #F3F3DF;
+    --logo-font: 'Lobster', sans-serif;
+}
+
+
+body {
+   background-color: var(--palette-color-2);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: fixed;
+   height: 100vh;
+   font-family: 'Poppins', sans-serif !important;
+   margin: 0;
+}
+
+.shoppies-front > .row {
+  overflow: auto;
+  flex-wrap: nowrap;
+}
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 1rem;
+	padding: 1rem;
   text-align: center;
+  color: var(--palette-color-5)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
